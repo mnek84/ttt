@@ -1,0 +1,48 @@
+
+    <ons-page modifier="serie-detail-{{platform}}" ng-controller="SerieController">
+    
+        <ons-toolbar modifier="transparent">
+          <div class="left">
+            <ons-toolbar-button ng-click='close()'><ons-icon icon="ion-android-arrow-back" style="color: white;font-size:40px;padding-top:10px;"></ons-icon></ons-toolbar-button>
+          </div>
+        </ons-toolbar>
+    
+        <div style="background-image:url('{{serie.image}}');background-size:cover;height:300px;background-position:50% 100%;">
+            
+        </div>
+    
+        <ons-row>
+            <ons-col><h1 class="text-left">{{serie.title}}</h1></ons-col>
+        </ons-row>
+    
+        <ons-row>
+            <ons-col>
+                <p>{{serie.body}} </p>
+            </ons-col>
+        </ons-row>
+    
+        <div class="break"></div>
+        
+        <ons-row class="row" >
+           <ons-col width="100%" ng-repeat="capitulo in capitulos"> 
+                <h4>EPISODIO {{capitulo.episode}}</h4>
+                <div class="item-show" style=" -webkit-box-shadow: 0 8px 6px -6px black;-moz-box-shadow: 0 8px 6px -6px black;
+      box-shadow: 0 8px 6px -6px black;background-image: url('{{capitulo.thumbs}}');background-size: cover;
+      background-repeat: no-repeat;background-position: 50% 50%;border: 3px solid white;border-radius:20px;">
+                    <a class="play-show-detail" ng-click="viewVideo(capitulo.media)">
+                        <ons-icon icon="fa-play-circle-o" size="30px" style="padding-top:25px;padding-left:15px;"></ons-icon>
+                    </a>
+                    <a class="info-show-detail">
+                        <ons-icon icon="fa-cloud-download" size="20px" style="padding-top:10px;padding-left:20px;"></ons-icon>
+                    </a>   
+                    <div class="progress-bar">
+                            
+                    </div> 
+                </div>
+                <br>
+                <p>{{capitulo.description}}</p>
+            </ons-col>                
+        </ons-row>
+                  
+    </ons-page>
+        

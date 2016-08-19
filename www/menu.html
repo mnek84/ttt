@@ -1,0 +1,52 @@
+<ons-page modifier="menu-page">
+    
+      
+     
+    <ons-toolbar modifier="transparent">
+        <div class="center">
+            <div style="margin:30px 20px;">
+                <input type="search" class="search-input" ng-model="searchText" placeholder="Buscar"></input>
+            </div>
+        </div>
+    </ons-toolbar>
+    
+    <br>
+    
+    <h4 style="padding-left:20px;">Menu</h4>
+    
+    <ons-list class="menu-list">
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            <ons-icon icon="fa-cloud-download"></ons-icon>
+            Mi coleccion
+        </ons-list-item>
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            <ons-icon icon="fa-paw"></ons-icon>
+            Selecciona tu
+        </ons-list-item>
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            <ons-icon icon="fa-picture-o"></ons-icon>
+            Cambiar fondo de pantalla
+        </ons-list-item>
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            <ons-icon icon="fa-users"></ons-icon>
+            Mi cuenta
+        </ons-list-item>
+    </ons-list>
+
+    <br>
+
+    <h4 style="padding-left:20px;">Configuraciones</h4>
+    
+    <ons-list class="menu-list">
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            Terminos y condiciones                   
+        </ons-list-item>
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            Politicas de privavidad
+        </ons-list-item>
+        <ons-list-item class="menu-item" ng-click="menu.setMainPage('home.html', {closeMenu: true})">
+            Ayuda
+        </ons-list-item>
+    </ons-list>
+    
+</ons-page>

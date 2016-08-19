@@ -1,0 +1,13 @@
+
+    <ons-page modifier="video-detail" ng-controller="VideoController" >
+   
+        
+        <ons-toolbar modifier="transparent">            
+            <div class="right navigation-bar__right">
+                <ons-toolbar-button ng-click='close()'><ons-icon icon="ion-close-circled" style="color: #EC006E; font-size: 40px;" fixed-width="false"></ons-icon></ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+    
+        <iframe width="100%" height="100%" ng-src="{{mediaid}}" name="zembrion" frameborder="0" allowfullscreen></iframe>
+        
+    </ons-page>

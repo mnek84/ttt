@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- CSP support mode (required for Windows Universal apps): https://docs.angularjs.org/api/ng/directive/ngCsp -->
+<html lang="en">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">    
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline';img-src * data:;script-src 'self' 'unsafe-inline' 'unsafe-eval' * https://debug.monaca.mobi:8080 http://ajax.googleapis.com http://tateti.ionmicrosystems.com;child-src *;">
+    
+    <!-- CSS dependencies -->
+    <link rel="stylesheet" href="components/loader.css">    
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="components/monaca-onsenui/css/onsenui.css" />
+    <link rel="stylesheet" href="components/monaca-onsenui/css/onsen-css-components.css" />
+    <!-- CSP support mode (required for Windows Universal apps) -->
+    <link rel="stylesheet" href="components/monaca-onsenui/js/angular/angular-csp.css" />
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/custom.css" />
+    <!-- JS dependencies -->
+    <script src="components/loader.js"></script>
+    <script src="libs/jquery.js"></script>    
+    <script src="libs/touchspin.min.js"></script>        
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-animate.js"></script>        
+    <!-- JS Custom -->
+    <script src="scripts/app.js"></script>    
+    <script src="scripts/services.js"></script>  
+</head>
+<body ng-controller="AppController">      
+    <div ng-show="!dataLoaded" class="preloader"></div> 
+    <ons-navigator var="rootNavigator" ng-show="true">               
+    </ons-navigator>    
+</body>
+</html>

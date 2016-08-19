@@ -1,0 +1,58 @@
+<ons-navigator ng-controller="HomeController">   
+   
+   <ons-page modifier="full_bg">    
+   
+        <ons-toolbar modifier="top">            
+            <div class="left navigation-bar__left">
+                <ons-toolbar-button ng-click="menu.toggle()">
+                    <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+            <div class="center navigation-bar__title navigation-bar__center logo">
+                <img src="images/logo.png" class="logo-{{platform}}">                   
+                <div class="cloud-{{platform}}"></diV>
+            </div>
+            <div class="right navigation-bar__right">
+                <span class="pet"><img src="images/pet.png" class="pet-{{platform}}"></span>
+            </div>
+        </ons-toolbar>
+       
+        <ons-carousel class="carousel-{{platform}}" swipeable overscrollable auto-scroll auto-scroll auto-refresh var="topCarousel">
+                <ons-carousel-item ng-repeat="serie in series" >              
+                    <div ng-click="viewSerie($index)" class="carousel-content-{{platform}}" style="background-image: url('{{serie.image}}');border:none;"></div>
+                </ons-carousel-item>              
+        </ons-carousel>
+
+        <div class="break" style="margin-top: 10px;"></div>
+
+        <ons-row>
+            <ons-col>                   
+                <h2 class="text-center" style="margin-top:0px;margin-bottom:10px;">CONTINUAR VIENDO</h2>
+            </ons-col>
+        </ons-row>           
+            
+        <ons-carousel swipeable style="height: 130px;" overscrollable auto-scroll item-width="130px">
+            <ons-carousel-item>                            
+                <div class="item-show-{{platform}}" style="background-image: url('images/sushi-bg.jpg');border:none;">                    
+                </div>
+            </ons-carousel-item>            
+        </ons-carousel>
+
+        <div class="break" style="margin-top: 20px;"></div>
+            
+        <ons-row>
+            <ons-col>                   
+                <h2 class="text-center" style="margin-top:0px;margin-bottom:10px;">SHOWS</h2>
+            </ons-col>
+        </ons-row>                                   
+
+        <ons-row class="row" >
+           <ons-col width="{{screenWidth > 640 ? '33%' : '50%'}}" ng-repeat="serie in series" ng-click="viewSerie($index)" style="border:none;">                    
+                <div class="item-show-{{platform}}" style="background-image: url('{{serie.image}}');border:none;">                    
+                </div>
+            </ons-col>                
+        </ons-row>
+            
+    </ons-page>
+    
+</ons-navigator>
